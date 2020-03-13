@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<c3p0-config>
+
+    <named-config name="rds">
+        <!-- 以上的user是数据库的用户，password是数据库的密码，driverClass是mysql的数据库驱动，jdbcUrl是连接数据库的url -->
+        <property name="user">root</property>
+        <property name="password">btktOSLfdxvufCGu</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">
+            jdbc:MySql://172.16.5.134:3306/datacenter_dp_public?useUnicode=true&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;characterEncoding=utf-8
+        </property>
+
+        <!--
+        错误
+        <property name="jdbcUrl" value="jdbc:MySql://10.81.178.120:3306/bigdata_analysis?useUnicode=true&amp;characterEncoding=utf-8"/>
+        -->
+        <!--内网地址-->
+        <!-- <property name="jdbcUrl">jdbc:MySql://10.81.178.120:3306/bigdata_platform?useUnicode=true&amp;characterEncoding=utf-8</property>
+         -->
+        <!-- <property name="jdbcUrl">jdbc:MySql://10.80.111.12:3306/bigdata_analysis?useUnicode=true&amp;characterEncoding=utf-8</property> -->
+        <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数 -->
+        <property name="acquireIncrement">5</property>
+        <!--初始化时获取十个连接，取值应在minPoolSize与maxPoolSize之间 -->
+        <property name="initialPoolSize">5</property>
+        <!--连接池中保留的最小连接数 -->
+        <property name="minPoolSize">5</property>
+        <!--连接池中保留的最大连接数 -->
+        <property name="maxPoolSize">20</property>
+        <!--JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default:
+            0 -->
+        <property name="maxStatements">20</property>
+        <!--maxStatementsPerConnection定义了连接池内单个连接所拥有的最大缓存statements数。Default: 0 -->
+        <property name="maxStatementsPerConnection">5</property>
+    </named-config>
+
+    <named-config name="test">
+        <!-- 以上的user是数据库的用户，password是数据库的密码，driverClass是mysql的数据库驱动，jdbcUrl是连接数据库的url -->
+        <property name="user">root</property>
+        <property name="password">123123</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:MySql://47.97.60.121:3306/datacenter_dp_dimension?useUnicode=true&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;characterEncoding=utf-8</property>
+
+        <!--
+        错误
+        <property name="jdbcUrl" value="jdbc:MySql://10.81.178.120:3306/bigdata_analysis?useUnicode=true&amp;characterEncoding=utf-8"/>
+        -->
+        <!--内网地址-->
+        <!-- <property name="jdbcUrl">jdbc:MySql://10.81.178.120:3306/bigdata_platform?useUnicode=true&amp;characterEncoding=utf-8</property>
+         -->
+        <!-- <property name="jdbcUrl">jdbc:MySql://10.80.111.12:3306/bigdata_analysis?useUnicode=true&amp;characterEncoding=utf-8</property> -->
+        <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数 -->
+        <property name="acquireIncrement">5</property>
+        <!--初始化时获取十个连接，取值应在minPoolSize与maxPoolSize之间 -->
+        <property name="initialPoolSize">5</property>
+        <!--连接池中保留的最小连接数 -->
+        <property name="minPoolSize">5</property>
+        <!--连接池中保留的最大连接数 -->
+        <property name="maxPoolSize">20</property>
+        <!--JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default:
+            0 -->
+        <property name="maxStatements">20</property>
+        <!--maxStatementsPerConnection定义了连接池内单个连接所拥有的最大缓存statements数。Default: 0 -->
+        <property name="maxStatementsPerConnection">5</property>
+    </named-config>
+
+</c3p0-config>
